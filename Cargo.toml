@@ -1,0 +1,17 @@
+[package]
+name = "nutcase"
+version = "0.1.0"
+edition = "2024"
+authors = ["Nutcase"]
+description = "Nova GPU Driver - Rust implementation for NVIDIA GPUs"
+license = "GPL-2.0"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 2
